@@ -60,7 +60,7 @@ def tutorial_detail(request, pk):
         
 @api_view(['GET'])
 def tutorial_list_published(request):
-    tutorials = Tutorial.objects.filter(published=True)
+    tutorials = Tutorial.objects.filter(publish=True)
         
     if request.method == 'GET': 
         tutorials_serializer = TutorialSerializer(tutorials, many=True)
