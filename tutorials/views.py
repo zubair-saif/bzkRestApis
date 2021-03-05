@@ -11,8 +11,9 @@ from rest_framework.decorators import api_view
 @api_view(['GET', 'POST', 'DELETE'])
 def tutorial_list(request):
     if request.method == 'GET':
-        tutorials = Tutorial.objects.all()
         
+        tutorials = Tutorial.objects.all()
+        print(request.data)
         title = request.GET.get('title', None)
         if title is not None:
             tutorials = tutorials.filter(title__icontains=title)
