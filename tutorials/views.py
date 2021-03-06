@@ -32,7 +32,7 @@ def tutorial_list(request):
     
     elif request.method == 'DELETE':
         count = Tutorial.objects.all().delete()
-        return JsonResponse({'message': '{} Tutorials were deleted successfully!'.format(count[0])}, status=status.HTTP_204_NO_CONTENT)
+        return JsonResponse({'message': '{}  deleted successfully!'.format(count[0])}, status=status.HTTP_204_NO_CONTENT)
  
  
 @api_view(['GET', 'PUT', 'DELETE'])
