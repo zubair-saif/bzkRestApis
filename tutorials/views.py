@@ -56,7 +56,7 @@ def tutorial_detail(request, pk):
  
     elif request.method == 'DELETE': 
         tutorial.delete() 
-        return JsonResponse({'message': 'Tutorial was deleted successfully!'}, status=status.HTTP_204_NO_CONTENT)
+        return JsonResponse({'message': 'deleted successfully!'}, status=status.HTTP_204_NO_CONTENT)
     
         
 @api_view(['GET'])
