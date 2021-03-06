@@ -13,7 +13,6 @@ def tutorial_list(request):
     if request.method == 'GET':
         
         tutorials = Tutorial.objects.all()
-        print(request.data)
         title = request.GET.get('title', None)
         if title is not None:
             tutorials = tutorials.filter(title__icontains=title)
